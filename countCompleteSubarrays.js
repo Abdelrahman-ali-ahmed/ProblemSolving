@@ -16,4 +16,4 @@ var countCompleteSubarrays = function(nums) {
    }
  }
      return(count );
- };
+ }; 
