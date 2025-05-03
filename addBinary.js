@@ -14,4 +14,6 @@ var addBinary = function(a, b) {
      carry = Math.floor(sum / 2);
    }
    return result.reverse().join("");
+
+   
 };
