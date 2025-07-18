@@ -15,7 +15,7 @@ var convert = function(s, numRows) {
         count=numRows-2
         a[i]=s.slice(start,stop).split("")
         start=stop
-        stop=stop+1
+         stop=count==0?stop+numRows:stop+1
       }else{
         a[i]=new Array(numRows).fill("")
         a[i][count]=s.slice(start,stop)
@@ -39,4 +39,19 @@ for(let i=0;i<numRows;i++){
 }
 
 return(res);
+};
+var convert2 = function(s, numRows) {
+    if (numRows === 1 || s.length <= numRows) return s;
+
+    let rows = new Array(Math.min(numRows, s.length)).fill("").map(() => "");
+    let curRow = 0;
+    let goingDown = false;
+
+    for (let c of s) {
+        rows[curRow] += c;
+        if (curRow === 0 || curRow === numRows - 1) goingDown = !goingDown;
+        curRow += goingDown ? 1 : -1;
+    }
+
+    return rows.join("");
 };
