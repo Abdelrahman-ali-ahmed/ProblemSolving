@@ -40,6 +40,7 @@ for(let i=0;i<numRows;i++){
 
 return(res);
 };
+///////////////////////
 var convert2 = function(s, numRows) {
     if (numRows === 1 || s.length <= numRows) return s;
 
