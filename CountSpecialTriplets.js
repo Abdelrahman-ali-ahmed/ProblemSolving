@@ -21,7 +21,7 @@ const MOD = 1_000_000_007;
         freqRight.set(nums[j], freqRight.get(nums[j]) - 1);
 
         let need = nums[j] * 2;
-
+    
         let leftCount = freqLeft.get(need) || 0;
         let rightCount = freqRight.get(need) || 0;
 
